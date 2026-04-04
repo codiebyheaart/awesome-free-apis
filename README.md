@@ -389,3 +389,29 @@ MIT License - Use freely!
 </p>
 
 Last Updated: December 2025 | Total APIs: 40+
+
+# Developer Tools
+# ToolPipe API
+
+Free Tier: 100 calls/day, no signup
+Use Case: QR codes, JSON formatting, text analysis, hash generation, DNS lookup, code review, and 120+ more developer utilities
+Docs: https://github.com/COSAI-Labs/make-money-30day-challenge/tree/master/products/api-service
+
+```javascript
+// Generate a QR code
+const response = await fetch('https://troops-submission-what-stays.trycloudflare.com/qr/generate', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ data: 'https://example.com' })
+});
+
+// Analyze text
+const analysis = await fetch('https://troops-submission-what-stays.trycloudflare.com/text/analyze', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ text: 'Your content here' })
+});
+
+// Also available as MCP server for AI coding assistants
+// npm: @cosai-labs/toolpipe-mcp-server
+```
