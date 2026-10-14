@@ -95,6 +95,16 @@ html<!-- Random image -->
 <!-- Grayscale + Blur -->
 <img src="https://picsum.photos/800/600?grayscale&blur=2">
 
+# FaviconDL
+
+Free Tier: Unlimited (no API key)
+Use Case: Extract favicons (ICO/PNG/SVG/Apple touch) by website URL
+Docs: https://favicondl.com/documentation.html
+
+```bash
+curl "https://favicondl.com/api/extract?url=github.com&format=json"
+```
+
 #  Finance & Crypto
 # CoinGecko
 
