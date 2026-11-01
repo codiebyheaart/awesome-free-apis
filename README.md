@@ -240,6 +240,21 @@ javascriptconst response = await fetch(
   `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=Inception`
 );
 
+# Bucketlist.nl Dream of the Day
+
+Free Tier: No key or account required; no numerical request quota is published.
+Use Case: One daily travel or life-experience idea, with image and source URL; Dutch by default.
+Docs: https://bucketlist.nl/brand/droom-van-de-dag.openapi.json
+
+```javascript
+const response = await fetch(
+  "https://bucketlist.nl/api/droom-van-de-dag?lang=nl"
+);
+if (!response.ok) throw new Error(`HTTP ${response.status}`);
+const { dream, language } = await response.json();
+console.log(dream.title, dream.canonicalUrl, language);
+```
+
 # News & Content
 News API
 
