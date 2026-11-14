@@ -251,6 +251,24 @@ javascriptconst response = await fetch(
   `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`
 );
 
+# 链小知区块链 (Lianxiaozhi)
+
+Free Tier: Free public read-only access, no account or API key; a fixed request quota is not published
+Use Case: Chinese blockchain news, learning material and tool-guide lookup. News/search covers the latest seven days; verify AI-assisted summaries against original sources
+Docs: https://lianxiaozhi.com/agent
+
+```javascript
+const response = await fetch('https://lianxiaozhi.com/api/v1/items?limit=1');
+if (!response.ok) {
+  // Respect Retry-After when supplied; do not retry continuously.
+  throw new Error(`HTTP ${response.status}`);
+}
+const data = await response.json();
+for (const item of data.items ?? []) {
+  console.log(item.title, item.links?.original);
+}
+```
+
 Dev.to
 
 Free Tier: Unlimited
